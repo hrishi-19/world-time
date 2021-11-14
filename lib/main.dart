@@ -3,12 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:world_timer/pages/home.dart';
 import 'package:world_timer/pages/choice.dart';
-import 'package:world_timer/pages/preloader.dart';
+import 'package:world_timer/pages/loader.dart';
 
 void main()=>runApp(MaterialApp(
+  initialRoute: '/',
   routes: {
-    '/':(context)=>Home(),
-    '/home':(context)=>load(),
+    '/':(context)=>load(),
+    '/home':(context)=>Home(),
     '/choose':(context)=>choose_loc(),
   },
 ));

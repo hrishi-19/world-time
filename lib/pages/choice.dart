@@ -7,8 +7,10 @@ class choose_loc extends StatefulWidget {
 }
 
 class _choose_locState extends State<choose_loc> {
+
   @override
   Widget build(BuildContext context) {
+    print("build function ran");
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
@@ -18,7 +20,7 @@ class _choose_locState extends State<choose_loc> {
         elevation: 0,
 
       ),
-      body:Text('choose a location screen'),
+      body:Text("hi"),
     );
   }
 }
