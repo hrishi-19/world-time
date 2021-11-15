@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
           child: Column(
             children: [
               FlatButton.icon(onPressed:(){
-                Navigator.pushNamed(context,'/home' );
+                Navigator.pushNamed(context,'/choose' );
               },
                   icon: Icon(Icons.edit_location), label: Text('Edit location'),
               color: Colors.amber,)
