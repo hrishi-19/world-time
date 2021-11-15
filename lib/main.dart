@@ -6,7 +6,7 @@ import 'package:world_timer/pages/choice.dart';
 import 'package:world_timer/pages/loader.dart';
 
 void main()=>runApp(MaterialApp(
-  initialRoute: '/home',
+  initialRoute: '/',
   routes: {
     '/':(context)=>load(),
     '/home':(context)=>Home(),
