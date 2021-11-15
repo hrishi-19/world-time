@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import'package:world_timer/pages/loader.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -17,15 +17,19 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
-    //print(data);
+    print(data);
+
+    // Dynamicall setting up background color & image
+    String bgImage = data['isDaytime'] ? 'day.png' : 'night.png';
+    Color? bgColor = data['isDaytime'] ? Colors.blue : Colors.indigo[900];
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: bgColor,
       body: SafeArea(
           child: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/day.png'), fit: BoxFit.cover)),
+                    image: AssetImage('assets/$bgImage'), fit: BoxFit.cover)),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
               child: Column(
