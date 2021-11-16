@@ -6,19 +6,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Map data = {};
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
-
+  Map data = { };
   @override
   Widget build(BuildContext context) {
-    data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
+    data = data.isNotEmpty?data:ModalRoute.of(context)!.settings.arguments as Map;
     print(data);
 
-    // Dynamicall setting up background color & image
     String bgImage = data['isDaytime'] ? 'day.png' : 'night.png';
     Color? bgColor = data['isDaytime'] ? Colors.blue : Colors.indigo[900];
 
@@ -53,7 +46,7 @@ class _HomeState extends State<Home> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      'Edit Location',
+                      'Choose Location',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

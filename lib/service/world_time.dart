@@ -4,11 +4,11 @@ import 'dart:convert';
 import 'package:intl/intl.dart';
 
 class WorldTime {
-  late String location;
-  late String time;
-  late String flag;
-  late Uri url;
-  late bool isDaytime;
+  String location;
+  String time='';
+  String flag;
+  Uri url;
+  bool isDaytime =true;
 
   WorldTime({required this.location, required this.flag, required this.url});
 
