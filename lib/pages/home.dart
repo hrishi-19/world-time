@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import'package:world_timer/pages/loader.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -83,3 +82,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+

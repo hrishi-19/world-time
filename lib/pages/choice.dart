@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import'package:world_timer/service/world_time.dart';
 
+
 class choose_loc extends StatefulWidget {
+
   @override
-  _ChooseLocationState createState() => _ChooseLocationState();
+  _choose_locState createState() => _choose_locState();
 }
 
-class _ChooseLocationState extends State<choose_loc> {
+class _choose_locState extends State<choose_loc> {
   List<WorldTime> locations = [
     WorldTime(
         url: Uri.parse('Europe/London'), location: 'London', flag: 'uk.png'),
@@ -42,12 +44,10 @@ class _ChooseLocationState extends State<choose_loc> {
       'isDaytime': instance.isDaytime,
     });
   }
-
   @override
   void initState() {
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,3 +81,4 @@ class _ChooseLocationState extends State<choose_loc> {
         ));
   }
 }
+

@@ -1,20 +1,20 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:world_timer/service/world_time.dart';
-import 'dart:convert';
 
-class load extends StatefulWidget {
-
+class Loading extends StatefulWidget {
   @override
-  _loadState createState() => _loadState();
+  _LoadingState createState() => _LoadingState();
 }
 
-class _loadState extends State<load> {
+class _LoadingState extends State<Loading> {
   void setupWorldTime() async {
     WorldTime instance = WorldTime(
-        location: 'uk',
-        flag: 'uk.png',
-        url: Uri.parse('Europe/London'));
+        location: 'Delhi',
+        flag: 'india.png',
+        url: Uri.parse('Asia/Delhi'));
     await instance.getTime();
     Navigator.pushReplacementNamed(context, '/home', arguments: {
       'location': instance.location,
@@ -42,4 +42,3 @@ class _loadState extends State<load> {
         ));
   }
 }
-
