@@ -1,13 +1,14 @@
 import 'package:http/http.dart';
-import'dart:convert';
-import'package:intl/intl.dart';
+import 'dart:convert';
+
+import 'package:intl/intl.dart';
 
 class WorldTime {
-  String location;
-  String time=" ";
-  String flag;
-  Uri url;
-  bool isDaytime=true;
+  late String location;
+  late String time;
+  late String flag;
+  late Uri url;
+  late bool isDaytime;
 
   WorldTime({required this.location, required this.flag, required this.url});
 
