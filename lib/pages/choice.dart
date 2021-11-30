@@ -13,10 +13,6 @@ class _choose_locState extends State<choose_loc> {
     WorldTime(
         url: Uri.parse('Europe/London'), location: 'London', flag: 'uk.png'),
     WorldTime(
-        url: Uri.parse('Europe/Berlin'),
-        location: 'Athens',
-        flag: 'greece.png'),
-    WorldTime(
         url: Uri.parse('Africa/Nairobi'),
         location: 'Nairobi',
         flag: 'kenya.png'),
