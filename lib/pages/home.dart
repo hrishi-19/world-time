@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
     data = data.isNotEmpty?data:ModalRoute.of(context)!.settings.arguments as Map;
     print(data);
 
-    String bgImage = data['isDaytime'] ? 'day.png' : 'night.png';
+    String bgImage = data['isDaytime'] ? 'day.jpg' : 'night.png';
     Color? bgColor = data['isDaytime'] ? Colors.blue : Colors.indigo[900];
 
     return Scaffold(
@@ -49,6 +49,7 @@ class _HomeState extends State<Home> {
                       'Choose Location',
                       style: TextStyle(color: Colors.white),
                     ),
+                    
                   ),
                   SizedBox(height: 20.0),
                   Row(
